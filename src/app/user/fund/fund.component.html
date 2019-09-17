@@ -1,0 +1,22 @@
+<section fxLayout="column" fxFlexAlign="stretch">
+  <div fxFlexAlign="center">
+    <p> Money Management </p>
+  </div>
+  
+  <p>Effectively manage your money is the key to successfully trading in stock market</p>
+
+  <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
+    <mat-tab label="Account"> 
+      <h4>List of Your Trading Accounts</h4> 
+      <app-trading-account></app-trading-account>
+    </mat-tab>
+    <mat-tab label="Deposit">
+        <h4>Deposit Money Into Your Account</h4>
+        <app-deposit></app-deposit>
+    </mat-tab>
+    <mat-tab label="Withdraw">
+        <h4>Withdraw Money From Your Account</h4>
+        <app-withdraw></app-withdraw>
+      </mat-tab>
+  </mat-tab-group>
+</section>

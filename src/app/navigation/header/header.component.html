@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        <a routerLink="/">Leon's Dashboard</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a mat-button routerLink="/stock/stocks">Stocks</a>
+            </li>
+            <li>
+                <a mat-button routerLink="/account">Buy/Sale</a>
+            </li>
+            <li>
+                <a mat-button routerLink="/user/fund">Deposit/Withdraw</a>
+            </li>
+            <li>
+                <a mat-button routerLink="/user/register">Register</a>
+            </li>
+            <li>
+                <a mat-button routerLink="/user/login">Login</a>
+            </li>
+
+        </ul>
+    </div>
+</mat-toolbar>

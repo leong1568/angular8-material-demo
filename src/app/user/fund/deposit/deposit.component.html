@@ -1,0 +1,20 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="500px" fxFlex.xs="100%">
+        <mat-card-title>Deposit Moneny Into Your account</mat-card-title>
+        <form [formGroup]="depositForm" autocomplete="off" novalidate (ngSubmit)="deposit(depositForm.value)" fxLayout="column wrap"
+        fxLayoutAlign="center center" fxLayoutGap="10px">
+        <mat-card-content>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Deposit Amount" formControlName="amount" id="amount">
+                <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+                <mat-error *ngIf="hasError('amount', 'required')">Name is required</mat-error>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions align="center">
+            <button mat-raised-button color="primary" [disabled]="!depositForm.valid">Deposit</button>
+            <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </mat-card-actions>
+        </form>
+    </mat-card>
+</section>
+  
